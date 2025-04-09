@@ -98,14 +98,14 @@ public:
 
     LinkedList<T> invert() {
         LinkedList<T> result;
+        Node *current = head;
+        while (current != nullptr) {
+            result.pushFront(current->data);
+            current = current->next;
+        }
         return result;
     }
 
-    void sort() {
-    }
-
-    void removeValue(const T &value) {
-    }
 };
 
 #endif // LINKEDLIST_H
